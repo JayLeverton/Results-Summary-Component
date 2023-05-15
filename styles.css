@@ -1,0 +1,215 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+
+
+
+:root {
+    /* PRIMARY */
+    --light-red: hsl(0, 100%, 67%);
+    --transparent-red: hsla(0, 100%, 67%, 0.05);
+    --light-yellow: hsl(39, 100%, 56%);
+    --transparent-yellow: hsl(39, 100%, 56%, 0.05);
+    --light-green: hsl(166, 100%, 37%);
+    --transparent-green: hsl(166, 100%, 37%, 0.05);
+    --light-violet: hsl(234, 85%, 45%);
+    --transparent-violet: hsl(234, 85%, 45%, 0.05);
+
+    /* GRADIENTS */
+    --light-slate-blue-background: hsl(252, 100%, 67%);
+    --light-royal-blue-background: hsl(241, 81%, 54%);
+
+    /* NEUTRAL */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --black-some-transparancy: hsla(0, 0%, 0%, 0.35);
+    --black-full-transparancy: hsla(0, 0%, 0%, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-size: 18px;
+    background-color: white;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: bold;
+}
+
+#first-section {
+    background: linear-gradient(var(--light-slate-blue-background),
+            var(--light-royal-blue-background));
+    border-radius: 0rem 0rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2.5rem 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: var(--light-lavender);
+
+}
+
+.score-bubble {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10rem 10rem 10rem 10rem;
+    background: linear-gradient(var(--black-some-transparancy),
+            var(--black-full-transparancy));
+    width: 14rem;
+    height: 14rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+.score {
+    display: flex;
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.of-100 {
+    display: flex;
+    font-size: 1.2rem;
+    color: var(--light-lavender);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--pale-blue);
+    margin-bottom: 1rem;
+}
+
+.score-details {
+    color: var(--light-lavender);
+}
+
+#second-section {
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    width: 100%;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray-blue);
+}
+
+.cognitive-row {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.cognitive-row img {
+    margin: 0rem 1rem 0rem 1rem;
+    height: 2rem;
+    align-self: center;
+}
+
+h4 {
+    align-self: center;
+}
+
+.row-sub-score {
+    display: flex;
+    align-self: center;
+    justify-content: end;
+    width: 100%;
+    margin-right: 1rem;
+}
+
+.sub-score-result {
+    color: var(--dark-gray-blue);
+}
+
+.sub-score-max {
+    color: gray;
+}
+
+.red-row {
+    background-color: var(--transparent-red);
+    color: var(--light-red)
+}
+
+.yellow-row {
+    background-color: var(--transparent-yellow);
+    color: var(--light-yellow)
+}
+
+.green-row {
+    background-color: var(--transparent-green);
+    color: var(--light-green)
+}
+
+.violet-row {
+    background-color: var(--transparent-violet);
+    color: var(--light-violet)
+}
+
+.continue-btn {
+    background-color: var(--dark-gray-blue);
+    border: 0;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    height: 4rem;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.continue-btn:active {
+    background: linear-gradient(var(--light-slate-blue-background),
+            var(--light-royal-blue-background));
+    ;
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        width: clamp(700px, 50%, 800px);
+        justify-content: space-around;
+    }
+
+    .section-container {
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        flex-direction: row;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #first-section {
+        border-radius: 2rem 2em 2rem 2rem;
+    }
+}
